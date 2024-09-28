@@ -35,6 +35,10 @@ public class Activity extends BaseEntity implements Gradable {
     @Column
     private Double sumGrade = 0d;
 
+    @Column
+    @Lob
+    private String description;
+
     //Type enum
 
     //TODO: Add tags
