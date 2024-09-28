@@ -24,10 +24,10 @@ public class Activity extends BaseEntity implements Gradable {
     private List<Campaign> campaigns;
 
     @Column
-    private Integer countOfGrades;
+    private Integer countOfGrades = 0;
 
     @Column
-    private Double sumGrade;
+    private Double sumGrade = 0d;
 
     //Type enum
 
@@ -43,7 +43,7 @@ public class Activity extends BaseEntity implements Gradable {
 
     @Override
     public double getSumGrade() {
-        return 0;
+        return sumGrade;
     }
 
     @Override
