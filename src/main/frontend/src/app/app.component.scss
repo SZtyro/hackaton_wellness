@@ -98,9 +98,9 @@ mat-drawer-content{
   // box-shadow: 1px 1px 10px 1px var(--accent-color);
 }
 
-.menu-item mat-icon{
+::ng-deep .menu-item .span[class=material-symbols-outlined]{
   margin: 7px;
-  font-size: 30px;
+  font-size: 390px;
   height: 100%;
   width: fit-content;
   display: flex;

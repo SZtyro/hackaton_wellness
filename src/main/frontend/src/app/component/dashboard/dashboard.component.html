@@ -1,6 +1,35 @@
 <div class="container">
     <div class="row">
-        <app-tile class="col-md-4" title="Aktywności na dziś"></app-tile>
-        <app-tile class="col-md-4" title="Wyzwania"></app-tile>
+        <!-- <app-tile class="col-md-4" title="Aktywności na dziś"></app-tile> -->
+        <app-tile class="col-md-4" title="card"></app-tile>
+        <!-- <app-tile class="col-md-4" title="Wyzwania"></app-tile> -->
+        <div class="col-md-6">
+            <mat-card class="col-md-6" *ngFor="let item of trending">
+                <img mat-card-image height="120" [src]="item.image">
+
+                <mat-card-content class="d-flex" >
+                    <div class="d-flex flex-column" style="gap: 4px">
+                        <span class="material-symbols-rounded">
+                            {{item.typeIcon}}
+                        </span>
+                        <span class="grade badge">
+                            <span class="material-symbols-rounded">
+                                star
+                            </span>
+                            <span>{{item.grade}}</span>
+                        </span>
+                        <span class="shared badge">
+                            <span class="material-symbols-rounded">
+                                person
+                            </span>
+                            <span>{{item.shared}}</span>
+                        </span>
+                    </div>
+                    <p>
+                        {{item.description}}
+                    </p>
+                </mat-card-content>
+            </mat-card>
+        </div>
     </div>
 </div>
