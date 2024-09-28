@@ -38,7 +38,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { TileComponent } from './component/tile/tile.component';
-
+import { MatBadgeModule } from '@angular/material/badge';
 
 export let AppInjector: Injector;
 
@@ -65,11 +65,7 @@ export const MY_DATE_FORMATS = {
 };
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    DashboardComponent,
-    TileComponent
-  ],
+  declarations: [AppComponent, DashboardComponent, TileComponent],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
@@ -106,7 +102,8 @@ export const MY_DATE_FORMATS = {
     MatMomentDateModule,
     MatSnackBarModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    MatBadgeModule,
   ],
   providers: [
     // { provide: MAT_DATE_LOCALE, useValue: 'pl-PL' },
@@ -122,7 +119,5 @@ export const MY_DATE_FORMATS = {
   ],
 })
 export class AppModule {
-  constructor(private injector: Injector) {
-
-  }
+  constructor(private injector: Injector) {}
 }
