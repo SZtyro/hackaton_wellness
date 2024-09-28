@@ -36,6 +36,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 export let AppInjector: Injector;
@@ -102,7 +103,9 @@ export const MY_DATE_FORMATS = {
     MatMomentDateModule,
     MatSnackBarModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    MatBadgeModule,
+
   ],
   providers: [
     // { provide: MAT_DATE_LOCALE, useValue: 'pl-PL' },
