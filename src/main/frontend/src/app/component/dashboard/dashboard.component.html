@@ -8,34 +8,38 @@
         <div class="col-md-6" style="padding-top: 15px">
           <div class="row">
             <h2>Trendings</h2>
-            <mat-card class="col-md-6" *ngFor="let item of trending">
-                <img mat-card-image height="120" [src]="item.image">
 
-                <mat-card-content class="d-flex" >
-
-                    <div class="d-flex flex-column" style="gap: 4px">
-                      <h3>{{item.title}}</h3>
-                      <h5>{{item.type}}</h5>
-                        <span class="material-symbols-rounded badge-sm">
+            <mat-card class="example-card" appearance="outlined" class="col-md-6 col-sm-12" *ngFor="let item of trending">
+              <img mat-card-image height="120" [src]="item.image">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"><span class="material-symbols-rounded badge-sm">
                             {{item.typeIcon}}
-                        </span>
-                        <span class="grade badge">
+                        </span></div>
+                <mat-card-title>{{item.title}}</mat-card-title>
+                <mat-card-subtitle>{{item.type}}</mat-card-subtitle>
+              </mat-card-header>
+
+              <mat-card-content>
+                <p>
+                  {{item.description}}
+                </p>
+              </mat-card-content>
+              <mat-card-actions>
+                <span class="grade badge">
                             <span class="material-symbols-rounded">
                                 star
                             </span>
                             <span>{{item.grade}}</span>
                         </span>
-                        <span class="shared badge">
+                <span class="shared badge">
                             <span class="material-symbols-rounded">
                                 person
                             </span>
                             <span>{{item.shared}}</span>
                         </span>
-                    </div>
-                    <p class="item-desc">
-                        {{item.description}}
-                    </p>
-                </mat-card-content>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+              </mat-card-actions>
             </mat-card>
         </div></div>
     </div>
@@ -43,22 +47,39 @@
     <div class="col-md-12" style="padding-top: 15px">
       <div class="row">
         <h2>Daily goals</h2>
-        <mat-card class="col-md-6" *ngFor="let item of daily">
+        <mat-card class="example-card" appearance="outlined" class="col-md-6 col-sm-12" *ngFor="let item of daily">
           <img mat-card-image height="120" [src]="item.image">
-          <mat-card-content class="d-flex" >
-            <mat-card-header>
-              <mat-card-title>{{item.title}}</mat-card-title>
-              <mat-card-subtitle>{{item.type}}</mat-card-subtitle>
-              <span class="material-symbols-rounded badge-sm">
-                  {{item.typeIcon}}
-              </span>
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"><span class="material-symbols-rounded badge-sm">
+                            {{item.typeIcon}}
+                        </span></div>
+            <mat-card-title>{{item.title}}</mat-card-title>
+            <mat-card-subtitle>{{item.type}}</mat-card-subtitle>
+          </mat-card-header>
 
-            </mat-card-header>
-            <p class="item-desc">
+          <mat-card-content>
+            <p>
               {{item.description}}
             </p>
           </mat-card-content>
+          <mat-card-actions>
+                <span class="grade badge">
+                            <span class="material-symbols-rounded">
+                                star
+                            </span>
+                            <span>{{item.grade}}</span>
+                        </span>
+            <span class="shared badge">
+                            <span class="material-symbols-rounded">
+                                person
+                            </span>
+                            <span>{{item.shared}}</span>
+                        </span>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
         </mat-card>
+
       </div>
     </div>
   </div>
