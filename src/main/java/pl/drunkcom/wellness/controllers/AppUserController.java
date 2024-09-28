@@ -19,6 +19,9 @@ public class AppUserController {
 
     @PostMapping("/register")
     public ResponseEntity<AppUser> register(@RequestBody AppUser user){
+        if(appUserService.findByUsername(user.getUsername()) != null){
+            return new ResponseEntity<>(HttpStatus.CONFLICT);
+        }
         return new ResponseEntity<>(appUserService.register(user), HttpStatus.CREATED);
     }
 
