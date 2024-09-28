@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    this.mobileView = event.target.innerWidth > 576;
+    this.mobileView = event.target.innerWidth > 768;
   }
 
   menu = [
@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
   ]
 
   ngOnInit(): void {
-    this.mobileView = window.innerWidth > 576;
+    this.mobileView = window.innerWidth > 768;
   }
 
   getCurrentPath(): string{

@@ -165,3 +165,30 @@ mat-drawer-content{
 //   background: inherit;
 // }
 
+.selected{
+  background:red
+  }
+
+@media screen and (max-width: 768px) {
+    .panel-wrapper{
+        position: fixed;
+        bottom:0;
+        height:100px;
+        width: 100%;
+      }
+
+    ::ng-deep .mat-drawer-content{
+        height: 100px !important;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        position: absolute !important;
+        border-radius: 20px 0px 0px 0px !important;
+        display:inline-block
+      }
+
+    .menu-wrapper {
+        flex-direction: row;
+       }
+
+}

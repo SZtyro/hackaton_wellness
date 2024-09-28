@@ -1,9 +1,21 @@
 <mat-drawer-container autosize>
-  <mat-drawer #drawer mode="side" [opened]="mobileView">
+  <mat-drawer #drawer mode="side" [opened]="true">
     <div class="panel-wrapper">
       <div class="panel">
         <div class="drawer-inner-container">
           <div class="menu-wrapper">
+            <a href="{{item.path}}" class="menu-item" *ngFor="let item of menu" matRipple [ngClass]="{selected: getCurrentPath() == item.path}">
+              <mat-icon>{{item.icon}}</mat-icon>
+              <span>{{item.name | translate}}</span>
+            </a>
+            <a href="{{item.path}}" class="menu-item" *ngFor="let item of menu" matRipple [ngClass]="{selected: getCurrentPath() == item.path}">
+              <mat-icon>{{item.icon}}</mat-icon>
+              <span>{{item.name | translate}}</span>
+            </a>
+            <a href="{{item.path}}" class="menu-item" *ngFor="let item of menu" matRipple [ngClass]="{selected: getCurrentPath() == item.path}">
+              <mat-icon>{{item.icon}}</mat-icon>
+              <span>{{item.name | translate}}</span>
+            </a>
             <a href="{{item.path}}" class="menu-item" *ngFor="let item of menu" matRipple [ngClass]="{selected: getCurrentPath() == item.path}">
               <mat-icon>{{item.icon}}</mat-icon>
               <span>{{item.name | translate}}</span>
