@@ -1,5 +1,5 @@
 <mat-drawer-container autosize>
-  <mat-drawer #drawer mode="side" [opened]="mobileView">
+  <mat-drawer #drawer mode="side" [opened]="true">
     <div class="panel-wrapper">
       <div class="panel">
         <div class="drawer-inner-container">
@@ -8,10 +8,22 @@
               <mat-icon>{{item.icon}}</mat-icon>
               <span>{{item.name | translate}}</span>
             </a>
+            <a href="{{item.path}}" class="menu-item" *ngFor="let item of menu" matRipple [ngClass]="{selected: getCurrentPath() == item.path}">
+              <mat-icon>{{item.icon}}</mat-icon>
+              <span>{{item.name | translate}}</span>
+            </a>
+            <a href="{{item.path}}" class="menu-item" *ngFor="let item of menu" matRipple [ngClass]="{selected: getCurrentPath() == item.path}">
+              <mat-icon>{{item.icon}}</mat-icon>
+              <span>{{item.name | translate}}</span>
+            </a>
+            <a href="{{item.path}}" class="menu-item" *ngFor="let item of menu" matRipple [ngClass]="{selected: getCurrentPath() == item.path}">
+              <mat-icon>{{item.icon}}</mat-icon>
+              <span>{{item.name | translate}}</span>
+            </a>
           </div>
-        
+
         </div>
-        
+
         <div class="bottom-menu">
           <div class="menu-wrapper">
             <a *ngIf="!isServeEnabled()" class="menu-item" [href]="getDevelopHref()">
@@ -28,6 +40,6 @@
   <mat-drawer-content style="overflow-x: hidden; overflow-y: auto;">
     <router-outlet></router-outlet>
   </mat-drawer-content>
-  
+
 
 </mat-drawer-container>
