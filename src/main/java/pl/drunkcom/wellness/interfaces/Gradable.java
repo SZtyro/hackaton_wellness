@@ -2,12 +2,12 @@ package pl.drunkcom.wellness.interfaces;
 
 public interface Gradable {
 
-    public int getCountOfGrades();
+    int getCountOfGrades();
 
-    public double getAverageGrade();
+    double getSumGrade();
 
-    public void setCountOfGrades(int countOfGrades);
+    void setCountOfGrades(int countOfGrades);
 
-    public void setAverageGrade(double averageGrade);
+    void setSumGrade(double averageGrade);
 
 }
