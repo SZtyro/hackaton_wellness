@@ -1,4 +1,24 @@
 .form-container{
     background: var(--sys-surface-container-high);
     border-radius: 8px;
+    padding: 24px;
+}
+
+.form-wrapper > div {
+    padding: 0;
+    
+}
+
+.container-margin{
+    margin: 10px;
+}
+
+.profile-img{
+    background-color: var(--sys-primary-container);
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

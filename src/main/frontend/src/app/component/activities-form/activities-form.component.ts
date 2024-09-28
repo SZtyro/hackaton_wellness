@@ -11,6 +11,4 @@ import { BaseService } from 'src/app/service/base.service';
 export class ActivitiesFormComponent extends BaseFormComponent{
   override resource: BaseService<any> = this.injector.get(ActivityService);
 
-  
-
 }

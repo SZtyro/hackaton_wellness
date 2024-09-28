@@ -11,16 +11,46 @@
            
         </div>
         <div class="col-12">
-            <div *ngIf="loaded; else loading" class="form-container p-3">
-                <mat-form-field appearance="outline">
-                    <mat-label>Name</mat-label>
-                    <input matInput type="text" [(ngModel)]="object.name">
-                </mat-form-field>
-            </div>
+           
             <ng-template #loading>
                 loading
             </ng-template>
-            
+            <div class="row form-wrapper" *ngIf="loaded; else loading" >
+                <div class="col-md-8 col-lg-9">
+                    <div class="form-container">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Name</mat-label>
+                            <input matInput type="text" [(ngModel)]="object.name">
+                        </mat-form-field>
+                    </div>
+                   
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="form-container container-margin d-flex align-items-center flex-column">
+                        <div class="profile-img">FT</div>
+                        <div class="d-flex">
+                            <span class="material-symbols-rounded">
+                                grade
+                            </span>
+                            4.5
+                        </div>
+                        <div class="d-flex">
+                            <button mat-button>More</button>
+                            <button mat-raised-button>More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-container container-margin">
+                        Taski
+                        <button mat-raised-button>Start activity</button>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-container container-margin">map</div>
+                </div>
+            </div>
            
         </div>
     </div>
