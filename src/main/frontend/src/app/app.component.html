@@ -5,21 +5,12 @@
         <div class="drawer-inner-container">
           <div class="menu-wrapper">
             <a href="{{item.path}}" class="menu-item" *ngFor="let item of menu" matRipple [ngClass]="{selected: getCurrentPath() == item.path}">
-              <mat-icon>{{item.icon}}</mat-icon>
-              <span>{{item.name | translate}}</span>
+                <span class="material-symbols-rounded">
+                  {{item.icon}}
+                </span>
+              <span>{{item.name}}</span>
             </a>
-            <a href="{{item.path}}" class="menu-item" *ngFor="let item of menu" matRipple [ngClass]="{selected: getCurrentPath() == item.path}">
-              <mat-icon>{{item.icon}}</mat-icon>
-              <span>{{item.name | translate}}</span>
-            </a>
-            <a href="{{item.path}}" class="menu-item" *ngFor="let item of menu" matRipple [ngClass]="{selected: getCurrentPath() == item.path}">
-              <mat-icon>{{item.icon}}</mat-icon>
-              <span>{{item.name | translate}}</span>
-            </a>
-            <a href="{{item.path}}" class="menu-item" *ngFor="let item of menu" matRipple [ngClass]="{selected: getCurrentPath() == item.path}">
-              <mat-icon>{{item.icon}}</mat-icon>
-              <span>{{item.name | translate}}</span>
-            </a>
+           
           </div>
 
         </div>
