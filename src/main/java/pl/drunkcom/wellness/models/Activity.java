@@ -35,9 +35,9 @@ public class Activity extends BaseEntity implements Gradable {
     @Lob
     private String description;
 
-    //Type enum
-
-    //TODO: Add tags
+    @ElementCollection
+    @Column
+    private List<String> guests;
 
     @ManyToMany
     private List<ActivityTag> activityTag;
