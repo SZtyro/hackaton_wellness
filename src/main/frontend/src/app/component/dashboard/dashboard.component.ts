@@ -10,49 +10,49 @@ export class DashboardComponent {
     {
       typeIcon: 'hiking',
       grade: 4.3,
-      shared: 2,
-            type:'Indoor',
+      shared: 21,
+            type:'Outdoor',
             title:'Śnieżka',
       image:
-        'https://www.niesamowitapolska.eu/images/malopolska/tatry/110755778_m.webp',
+        'https://hasajacezajace.com/wp-content/uploads/2023/10/sniezka-karkonosze-92.jpg',
       description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
       A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
       bred for hunting.`,
     },
     {
-        typeIcon: 'hiking',
-        grade: 4.3,
-        shared: 2,
-              type:'Indoor',
+        typeIcon: 'pool',
+        grade: 2.3,
+        shared: 95,
+              type:'Outdoor',
               title:'Mrągowo',
         image:
-          'https://www.niesamowitapolska.eu/images/malopolska/tatry/110755778_m.webp',
+          'https://www.szalonewalizki.pl/wp-content/uploads/2021/09/DJI_0893-2.jpg',
         description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
         A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
         bred for hunting.`,
       },
 
         {
-            typeIcon: 'hiking',
-            grade: 4.3,
-            shared: 2,
-                  type:'Indoor',
+            typeIcon: 'directions_walk',
+            grade: 1.8,
+            shared: 64,
+                  type:'Outdoor',
                   title:'Wałbrzych',
             image:
-              'https://www.niesamowitapolska.eu/images/malopolska/tatry/110755778_m.webp',
+              'https://www.busemprzezswiat.pl/wp-content/uploads/2020/07/dn0b2928.jpg',
             description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
             A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
             bred for hunting.`,
           },
 
             {
-                typeIcon: 'hiking',
-                grade: 4.3,
-                shared: 2,
-                      type:'Indoor',
+                typeIcon: 'directions_walk',
+                grade: 4.1,
+                shared: 17,
+                      type:'Outdoor',
                       title:'Polańczyk',
                 image:
-                  'https://www.niesamowitapolska.eu/images/malopolska/tatry/110755778_m.webp',
+                  'https://www.owbystre.pl/wp-content/uploads/2023/02/Polanczyk.jpg',
                 description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
                 A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
                 bred for hunting.`,
@@ -61,25 +61,25 @@ export class DashboardComponent {
 
 daily = [
     {
-      typeIcon: 'hiking',
-      grade: 4.3,
-      shared: 2,
-      type:'Indoor',
-      title:'#1',
+      typeIcon: 'directions_walk',
+      grade: 5.3,
+      shared: 234,
+      type:'Outdoor',
+      title:'Zamek na Wawelu',
       image:
-        'https://www.niesamowitapolska.eu/images/malopolska/tatry/110755778_m.webp',
+        'https://trivabook.pl/thumbs/6/wawel-garsc-praktycznych-informacji-o-zwiedzaniu-6812d983.jpg',
       description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
       A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
       bred for hunting.`,
     },
     {
-        typeIcon: 'hiking',
-        grade: 4.3,
-        shared: 2,
-        type:'Outdoor',
-        title:'#2',
+        typeIcon: 'cottage',
+        grade: 6.3,
+        shared: 176,
+        type:'Indoor',
+        title:'Pompki',
         image:
-          'https://www.niesamowitapolska.eu/images/malopolska/tatry/110755778_m.webp',
+          'https://hips.hearstapps.com/hmg-prod/images/man-cross-training-in-a-gym-royalty-free-image-1701272927.jpg',
         description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
         A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
         bred for hunting.`,
