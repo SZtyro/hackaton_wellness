@@ -163,7 +163,9 @@ mat-drawer-content{
 // }
 
 .selected .mat-icon{
-  background: var(--sys-primary-container) !important
+  background: var(--sys-primary-container) !important;
+  padding: 13px;
+  border-radius: 13px;
   }
 
 @media screen and (max-width: 768px) {
@@ -174,14 +176,17 @@ mat-drawer-content{
         width: 100%;
       }
 
-    ::ng-deep .mat-drawer-content{
+    ::ng-deep .panel{
         height: 100px !important;
         bottom: 0;
         right: 0;
         left: 0;
         position: absolute !important;
         border-radius: 20px 0px 0px 0px !important;
-        display:inline-block
+        display:inline-block;
+        background-color: var(--sys-outline-variant);
+        z-index: 99999;
+        overflow: hidden;
       }
 
     .menu-wrapper {
