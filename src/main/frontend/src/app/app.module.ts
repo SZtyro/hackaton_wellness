@@ -39,6 +39,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { TileComponent } from './component/tile/tile.component';
 import { MatBadgeModule } from '@angular/material/badge';
+import { ActivitiesListComponent } from './component/activities-list/activities-list.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 export let AppInjector: Injector;
 
@@ -65,7 +67,7 @@ export const MY_DATE_FORMATS = {
 };
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, TileComponent],
+  declarations: [AppComponent, DashboardComponent, TileComponent, ActivitiesListComponent],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
@@ -104,6 +106,7 @@ export const MY_DATE_FORMATS = {
     RouterModule,
     HttpClientModule,
     MatBadgeModule,
+    MatProgressBarModule,
   ],
   providers: [
     // { provide: MAT_DATE_LOCALE, useValue: 'pl-PL' },

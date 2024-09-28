@@ -1,5 +1,7 @@
 mat-card{
     height: 100px;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 mat-card-content{
@@ -25,4 +27,13 @@ mat-card-content{
 .shared{
     background-color: var(--sys-tertiary-container);
     color: var(--sys-on-tertiary-container);
+}
+
+.item-desc{
+  text-align: justify;
+  padding: 10px
+  }
+
+.material-symbols-rounded {
+    text-align: center;
 }
