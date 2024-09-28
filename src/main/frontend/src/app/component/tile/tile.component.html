@@ -10,7 +10,10 @@
 
     </mat-card-header>
 <br>
-        <mat-progress-bar mode="determinate" value={{item.progress}}></mat-progress-bar>
+<!--        <mat-progress-bar mode="determinate" value={{item.progress}}></mat-progress-bar>-->
+    <div class="progress" role="progressbar" aria-label="Example with label"  aria-valuemin="0" aria-valuemax="100">
+      <div class="progress-bar" style="width: {{item.progress}}%">{{item.progress}}%</div>
+    </div>
     <br>
     <mat-card-content>
       <p>
