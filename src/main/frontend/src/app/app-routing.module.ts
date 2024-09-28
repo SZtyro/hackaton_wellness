@@ -5,6 +5,7 @@ import { ActivitiesListComponent } from './component/activities-list/activities-
 import { ActivityService } from './service/activity.service';
 import { LoginComponent } from './component/login/login.component';
 import { MainComponent } from './component/main/main.component'
+import { ActivitiesFormComponent } from './component/activities-form/activities-form.component';
 
 const routes: Routes = [
   {
@@ -21,10 +22,16 @@ const routes: Routes = [
       },
       {
         path: 'activities',
-        component: ActivitiesListComponent,
-        resolve: {
-          list: ActivityService
-        }
+        children: [
+          { path: '', 
+            component: ActivitiesListComponent,
+            resolve: {
+              list: ActivityService
+            },
+          },
+          {path: ':id', component: ActivitiesFormComponent}
+        ]
+
       },
       {
         path: '',

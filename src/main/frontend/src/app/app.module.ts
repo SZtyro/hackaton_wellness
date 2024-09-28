@@ -40,8 +40,9 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { TileComponent } from './component/tile/tile.component';
 import { MatBadgeModule } from '@angular/material/badge';
 import { ActivitiesListComponent } from './component/activities-list/activities-list.component';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { LoginComponent } from './component/login/login.component';
+import { ActivitiesFormComponent } from './component/activities-form/activities-form.component';
 
 export let AppInjector: Injector;
 
@@ -68,7 +69,14 @@ export const MY_DATE_FORMATS = {
 };
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, TileComponent, ActivitiesListComponent, LoginComponent],
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    TileComponent,
+    ActivitiesListComponent,
+    LoginComponent,
+    ActivitiesFormComponent
+  ],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
@@ -107,7 +115,7 @@ export const MY_DATE_FORMATS = {
     RouterModule,
     HttpClientModule,
     MatBadgeModule,
-    MatProgressBarModule
+    MatProgressBarModule,
   ],
   providers: [
     // { provide: MAT_DATE_LOCALE, useValue: 'pl-PL' },
