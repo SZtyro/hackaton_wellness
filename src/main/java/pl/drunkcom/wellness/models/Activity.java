@@ -2,11 +2,7 @@ package pl.drunkcom.wellness.models;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.springframework.security.core.context.SecurityContext;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
 import pl.drunkcom.core.model.BaseEntity;
-import pl.drunkcom.wellness.enumerable.EnumActivityType;
 import pl.drunkcom.wellness.interfaces.Gradable;
 
 import javax.persistence.*;
@@ -43,8 +39,8 @@ public class Activity extends BaseEntity implements Gradable {
 
     //TODO: Add tags
 
-    @Enumerated(EnumType.STRING)
-    private EnumActivityType type;
+    @ManyToMany
+    private List<ActivityTag> activityTag;
 
     @Override
     public int getCountOfGrades() {
