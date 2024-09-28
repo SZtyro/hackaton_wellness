@@ -23,7 +23,7 @@ export class LoginComponent {
       username: this.emailFormControl.value,
       password: this.passwordFormControl.value,
     }).subscribe(
-      () => this.router.navigate([""]),
+      () => this.router.navigate(["/dashboard"]),
     )
   }
 }
