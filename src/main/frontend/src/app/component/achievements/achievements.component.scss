@@ -1,0 +1,9 @@
+.tile{
+    background-color: var(--sys-surface-container-high);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.tile > .material-symbols-rounded{
+    font-size: 80px;
+}
