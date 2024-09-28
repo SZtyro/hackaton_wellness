@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 p-3 d-flex justify-content-between">
+            <h2>
+                Activity
+            </h2>
+            <div class="d-flex" style="gap: 8px">
+                <button mat-raised-button (click)="save()">Save</button>
+                <button mat-button (click)="close()">Close</button>
+            </div>
+           
+        </div>
+        <div class="col-12">
+            <div *ngIf="loaded; else loading" class="form-container p-3">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput type="text" [(ngModel)]="object.name">
+                </mat-form-field>
+            </div>
+            <ng-template #loading>
+                loading
+            </ng-template>
+            
+           
+        </div>
+    </div>
+
+</div>

@@ -1,12 +1,14 @@
 mat-card{
     height: fit-content;
-    background: transparent !important;
+    //background: transparent !important;
     box-shadow: none !important;
-    padding-bottom:20px
+    padding:0px 0px 20px 0px;
+    margin:10px;
+    width:300px
 }
 
 mat-card-content{
-    background-color: var(--sys-inverse-on-surface);
+    //background-color: var(--sys-inverse-on-surface);
 }
 
 .badge{
@@ -40,4 +42,11 @@ mat-card-content{
 }
 
 .daily{
-  background: var(--)}
+
+}
+
+  @media screen and (max-width: 768px) {
+    mat-card{
+      width: fit-content !important
+      }
+    }
