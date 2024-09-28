@@ -1,7 +1,8 @@
 mat-card{
-    height: 100px;
+    height: fit-content;
     background: transparent !important;
     box-shadow: none !important;
+    padding-bottom:20px
 }
 
 mat-card-content{
