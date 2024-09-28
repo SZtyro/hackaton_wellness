@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2" *ngFor="let achievement of achievements">
+            <div class="tile d-flex align-items-center flex-column">
+                <span class="material-symbols-rounded">
+                    {{achievement.icon}}
+                </span>
+                <h5>{{achievement.title}}</h5>
+                <mat-progress-bar [value]="achievement.progress"></mat-progress-bar>
+            </div>
+        </div>
+    </div>
+</div>
