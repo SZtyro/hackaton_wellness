@@ -11,6 +11,8 @@ export class DashboardComponent {
       typeIcon: 'hiking',
       grade: 4.3,
       shared: 2,
+            type:'Indoor',
+            title:'#1',
       image:
         'https://www.niesamowitapolska.eu/images/malopolska/tatry/110755778_m.webp',
       description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
@@ -21,6 +23,8 @@ export class DashboardComponent {
         typeIcon: 'hiking',
         grade: 4.3,
         shared: 2,
+              type:'Indoor',
+              title:'#1',
         image:
           'https://www.niesamowitapolska.eu/images/malopolska/tatry/110755778_m.webp',
         description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
@@ -32,6 +36,8 @@ export class DashboardComponent {
             typeIcon: 'hiking',
             grade: 4.3,
             shared: 2,
+                  type:'Indoor',
+                  title:'#1',
             image:
               'https://www.niesamowitapolska.eu/images/malopolska/tatry/110755778_m.webp',
             description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
@@ -43,6 +49,8 @@ export class DashboardComponent {
                 typeIcon: 'hiking',
                 grade: 4.3,
                 shared: 2,
+                      type:'Indoor',
+                      title:'#1',
                 image:
                   'https://www.niesamowitapolska.eu/images/malopolska/tatry/110755778_m.webp',
                 description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
