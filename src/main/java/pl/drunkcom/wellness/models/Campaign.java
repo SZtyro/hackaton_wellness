@@ -7,6 +7,7 @@ import pl.drunkcom.wellness.interfaces.Gradable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import java.util.List;
 
@@ -29,6 +30,10 @@ public class Campaign extends BaseEntity implements Gradable {
 
     @Column
     private Double sumGrade;
+
+    @Column
+    @Lob
+    private String description;
 
 
     @Override

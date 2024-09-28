@@ -6,6 +6,7 @@ import pl.drunkcom.core.model.BaseEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 
 @EqualsAndHashCode(callSuper = true)
@@ -21,6 +22,13 @@ public class Task extends BaseEntity {
 
     @Column
     private int stage;
+
+    @Column
+    @Lob
+    private String description;
+
+    @Column
+    private String photoURL;
 
     //Activity can have multiple tasks, but one task can be assigned to only one activity
     @ManyToOne

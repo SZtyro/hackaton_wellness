@@ -3,7 +3,6 @@ package pl.drunkcom.wellness.models;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import pl.drunkcom.core.model.BaseEntity;
-import pl.drunkcom.wellness.enumerable.EnumActivityType;
 import pl.drunkcom.wellness.interfaces.Gradable;
 
 import javax.persistence.*;
@@ -17,6 +16,9 @@ public class Activity extends BaseEntity implements Gradable {
     @Column
     private String name;
 
+    @Column
+    private String author;
+
     @OneToMany
     private List<Task> tasks;
 
@@ -29,12 +31,16 @@ public class Activity extends BaseEntity implements Gradable {
     @Column
     private Double sumGrade = 0d;
 
+    @Column
+    @Lob
+    private String description;
+
     //Type enum
 
     //TODO: Add tags
 
-    @Enumerated(EnumType.STRING)
-    private EnumActivityType type;
+    @ManyToMany
+    private List<ActivityTag> activityTag;
 
     @Override
     public int getCountOfGrades() {
@@ -55,6 +61,4 @@ public class Activity extends BaseEntity implements Gradable {
     public void setSumGrade(double sumGrade) {
         this.sumGrade = sumGrade;
     }
-
-    //User
 }
