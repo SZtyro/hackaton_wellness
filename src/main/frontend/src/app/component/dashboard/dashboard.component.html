@@ -1,15 +1,18 @@
 <div class="container">
     <div class="row">
         <!-- <app-tile class="col-md-4" title="Aktywności na dziś"></app-tile> -->
-        <app-tile class="col-md-4" title="card"></app-tile>
+        <app-tile class="col-md-6" title="Your activities">
+        </app-tile>
         <!-- <app-tile class="col-md-4" title="Wyzwania"></app-tile> -->
-        <div class="col-md-6">
+        <div class="col-md-6" style="padding-top: 15px">
+          <div class="row">
+            <h2>Trendings</h2>
             <mat-card class="col-md-6" *ngFor="let item of trending">
                 <img mat-card-image height="120" [src]="item.image">
 
                 <mat-card-content class="d-flex" >
                     <div class="d-flex flex-column" style="gap: 4px">
-                        <span class="material-symbols-rounded">
+                        <span class="material-symbols-rounded badge-sm">
                             {{item.typeIcon}}
                         </span>
                         <span class="grade badge">
@@ -25,11 +28,12 @@
                             <span>{{item.shared}}</span>
                         </span>
                     </div>
-                    <p>
+                    <p class="item-desc">
                         {{item.description}}
                     </p>
                 </mat-card-content>
             </mat-card>
+        </div>
         </div>
     </div>
 </div>
