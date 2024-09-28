@@ -6,5 +6,5 @@ import pl.drunkcom.wellness.models.Campaign;
 import pl.drunkcom.wellness.repositories.CampaignRepository;
 
 @Service
-public class CampaignService extends BaseService<Campaign, CampaignRepository> {
+public class CampaignService extends GradeService<Campaign, CampaignRepository> {
 }
