@@ -1,5 +1,7 @@
 package pl.drunkcom.wellness.controllers;
 
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.drunkcom.core.rest.BaseController;
@@ -16,6 +18,20 @@ public class ActivityController extends BaseController<Activity, ActivityReposit
 
     @Override
     public Activity createEntity(Activity init) {
-        return init != null ? init : new Activity();
+        if (init != null) {
+            init.setAuthor(getPrincipal());
+            return init;  // Return the existing Activity if it's not null
+        } else {
+            return new Activity();  // Return a new Activity if init is null
+        }
+
+//        Activity init != null ? init : new Activity();
+//        init.setAuthor(getPrincipal());
+
+    }
+
+    public String getPrincipal(){
+        User temp = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return temp.getUsername();
     }
 }

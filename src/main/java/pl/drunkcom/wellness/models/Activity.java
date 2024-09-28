@@ -2,6 +2,9 @@ package pl.drunkcom.wellness.models;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import pl.drunkcom.core.model.BaseEntity;
 import pl.drunkcom.wellness.enumerable.EnumActivityType;
 import pl.drunkcom.wellness.interfaces.Gradable;
@@ -17,6 +20,9 @@ public class Activity extends BaseEntity implements Gradable {
     @Column
     private String name;
 
+    @Column
+    private String author;
+
     @OneToMany
     private List<Task> tasks;
 
@@ -24,7 +30,7 @@ public class Activity extends BaseEntity implements Gradable {
     private List<Campaign> campaigns;
 
     @Column
-    private Integer countOfGrades;
+    private Integer countOfGrades = 0;
 
     @Column
     private Double sumGrade;
@@ -53,6 +59,4 @@ public class Activity extends BaseEntity implements Gradable {
     public void setSumGrade(double sumGrade) {
         this.sumGrade = sumGrade;
     }
-
-    //User
 }
