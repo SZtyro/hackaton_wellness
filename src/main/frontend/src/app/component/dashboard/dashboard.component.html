@@ -1,3 +1,4 @@
+
 <div class="container">
     <div class="row">
         <!-- <app-tile class="col-md-4" title="Aktywności na dziś"></app-tile> -->
@@ -11,7 +12,10 @@
                 <img mat-card-image height="120" [src]="item.image">
 
                 <mat-card-content class="d-flex" >
+
                     <div class="d-flex flex-column" style="gap: 4px">
+                      <h3>{{item.title}}</h3>
+                      <h5>{{item.type}}</h5>
                         <span class="material-symbols-rounded badge-sm">
                             {{item.typeIcon}}
                         </span>
@@ -33,7 +37,29 @@
                     </p>
                 </mat-card-content>
             </mat-card>
-        </div>
-        </div>
+        </div></div>
     </div>
+  <div class="row daily">
+    <div class="col-md-12" style="padding-top: 15px">
+      <div class="row">
+        <h2>Daily goals</h2>
+        <mat-card class="col-md-6" *ngFor="let item of daily">
+          <img mat-card-image height="120" [src]="item.image">
+          <mat-card-content class="d-flex" >
+            <mat-card-header>
+              <mat-card-title>{{item.title}}</mat-card-title>
+              <mat-card-subtitle>{{item.type}}</mat-card-subtitle>
+              <span class="material-symbols-rounded badge-sm">
+                  {{item.typeIcon}}
+              </span>
+
+            </mat-card-header>
+            <p class="item-desc">
+              {{item.description}}
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
 </div>

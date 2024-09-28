@@ -3,12 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { ActivitiesListComponent } from './component/activities-list/activities-list.component';
 import { ActivityService } from './service/activity.service';
+import { MainComponent } from './component/main/main.component'
 
 const routes: Routes = [
   {
     path: '',
     resolve: { },
-    children: [ 
+    children: [
       {
         path: 'dashboard',
         component: DashboardComponent
@@ -22,8 +23,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full',
+        component: MainComponent
       },
     ],
   },
