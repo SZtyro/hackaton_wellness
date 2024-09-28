@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,6 +10,10 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   mobileView:boolean = false;
+
+  constructor(private router: Router){
+
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
@@ -39,4 +44,7 @@ export class AppComponent implements OnInit {
     return location.href.replace(':8080', ':4200')
   }
 
+  isAuthorized(){
+    return !this.router.url.includes('login')
+  }
 }
