@@ -1,11 +1,9 @@
-package pl.drunkcom.wellness.activity;
+package pl.drunkcom.wellness.models;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import pl.drunkcom.core.model.BaseEntity;
-import pl.drunkcom.wellness.campaign.Campaign;
 import pl.drunkcom.wellness.enumerable.EnumActivityType;
-import pl.drunkcom.wellness.task.Task;
 
 import javax.persistence.*;
 import java.util.List;

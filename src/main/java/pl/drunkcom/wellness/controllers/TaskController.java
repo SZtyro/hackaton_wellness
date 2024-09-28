@@ -1,8 +1,10 @@
-package pl.drunkcom.wellness.task;
+package pl.drunkcom.wellness.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.drunkcom.core.rest.BaseController;
+import pl.drunkcom.wellness.models.Task;
+import pl.drunkcom.wellness.repositories.TaskRepository;
 
 @RestController
 @RequestMapping("/api/tasks")
