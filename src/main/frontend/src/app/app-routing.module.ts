@@ -6,6 +6,7 @@ import { ActivityService } from './service/activity.service';
 import { LoginComponent } from './component/login/login.component';
 import { MainComponent } from './component/main/main.component'
 import { ActivitiesFormComponent } from './component/activities-form/activities-form.component';
+import { AchievementsComponent } from './component/achievements/achievements.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
           {path: ':id', component: ActivitiesFormComponent}
         ]
 
+      },
+      {
+        path: 'achievements',
+        component: AchievementsComponent
       },
       {
         path: '',

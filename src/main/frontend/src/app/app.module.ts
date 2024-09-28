@@ -43,6 +43,7 @@ import { ActivitiesListComponent } from './component/activities-list/activities-
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { LoginComponent } from './component/login/login.component';
 import { ActivitiesFormComponent } from './component/activities-form/activities-form.component';
+import { AchievementsComponent } from './component/achievements/achievements.component';
 
 export let AppInjector: Injector;
 
@@ -75,7 +76,8 @@ export const MY_DATE_FORMATS = {
     TileComponent,
     ActivitiesListComponent,
     LoginComponent,
-    ActivitiesFormComponent
+    ActivitiesFormComponent,
+    AchievementsComponent
   ],
   bootstrap: [AppComponent],
   imports: [
