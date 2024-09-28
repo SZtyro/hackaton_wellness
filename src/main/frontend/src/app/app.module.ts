@@ -36,6 +36,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { TileComponent } from './component/tile/tile.component';
 
 
 export let AppInjector: Injector;
@@ -64,7 +66,9 @@ export const MY_DATE_FORMATS = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    TileComponent
   ],
   bootstrap: [AppComponent],
   imports: [
