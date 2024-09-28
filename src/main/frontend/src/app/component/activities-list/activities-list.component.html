@@ -1,0 +1,28 @@
+<div class="container-fluid m-2">
+    <mat-chip-set aria-label="Fish selection">
+        <mat-chip>Indoor</mat-chip>
+        <mat-chip>Outdoor</mat-chip>
+        <mat-chip>Fitness</mat-chip>
+        <mat-chip>Extreme</mat-chip>
+    </mat-chip-set>
+    
+    <div class="p-2">
+        <div *ngFor="let item of items" matRipple class="w-100 d-flex p-2 justify-content-between list-item">
+            <div class="d-flex">
+                <span class="material-symbols-rounded" style="font-size: 36px;">
+                    hiking
+                </span>
+                <h5>{{item.name}}</h5>
+            </div>
+            <div>
+                <span class="grade badge">
+                    <span class="material-symbols-rounded">
+                        star
+                    </span>
+                    <span>{{item.grade}}</span>
+                </span>
+            </div>
+
+        </div>
+    </div>
+</div>

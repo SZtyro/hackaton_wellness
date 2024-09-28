@@ -1,5 +1,8 @@
 mat-card{
-    height: 100px;
+    height: fit-content;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding-bottom:20px
 }
 
 mat-card-content{
@@ -26,3 +29,15 @@ mat-card-content{
     background-color: var(--sys-tertiary-container);
     color: var(--sys-on-tertiary-container);
 }
+
+.item-desc{
+  text-align: justify;
+  padding: 10px
+  }
+
+.material-symbols-rounded {
+    text-align: center;
+}
+
+.daily{
+  background: var(--)}

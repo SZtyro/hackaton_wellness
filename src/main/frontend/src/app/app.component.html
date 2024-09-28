@@ -1,6 +1,6 @@
 <mat-drawer-container autosize>
-  <mat-drawer #drawer mode="side" [opened]="true">
-    <div class="panel-wrapper">
+  <mat-drawer #drawer mode="side" [opened]="isAuthorized()">
+    <div class="panel-wrapper" *ngIf="getCurrentPath()!=''">
       <div class="panel">
         <div class="drawer-inner-container">
           <div class="menu-wrapper">
@@ -10,7 +10,7 @@
               </span>
               <span>{{item.name}}</span>
             </a>
-           
+
           </div>
         </div>
 

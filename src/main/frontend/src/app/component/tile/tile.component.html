@@ -1,4 +1,28 @@
 <div class="tile-container">
     <h3>{{title}}</h3>
-    
+
+  <mat-card appearance="outlined" *ngFor="let item of activities">
+    <mat-card-header>
+      <mat-card-title>{{item.goal}} </mat-card-title>
+      <mat-card-subtitle>{{item.main_category}} - {{item.sub_category}}  <span class="material-symbols-rounded badge-sm">
+                            {{item.typeIcon}}
+                        </span></mat-card-subtitle>
+
+    </mat-card-header>
+<br>
+        <mat-progress-bar mode="determinate" value={{item.progress}}></mat-progress-bar>
+    <br>
+    <mat-card-content>
+      <p>
+        {{item.description}}
+      </p>
+      <b>From: {{item.start_date | date: 'dd-MM-yyyy'}}
+      To: {{item.end_date | date: 'dd-MM-yyyy'}}</b>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button>Learn More</button>
+      <button mat-button>Pause</button>
+      <button mat-button>Delete</button>
+    </mat-card-actions>
+  </mat-card>
 </div>

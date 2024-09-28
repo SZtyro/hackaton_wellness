@@ -33,9 +33,11 @@ public class Activity extends BaseEntity implements Gradable {
     private Integer countOfGrades = 0;
 
     @Column
-    private Double sumGrade;
+    private Double sumGrade = 0d;
 
     //Type enum
+
+    //TODO: Add tags
 
     @Enumerated(EnumType.STRING)
     private EnumActivityType type;

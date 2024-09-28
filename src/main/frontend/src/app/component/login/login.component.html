@@ -1,0 +1,16 @@
+
+<div class="d-flex justify-content-center align-content-center" style="margin-top: 200px;">
+    <div class="d-flex flex-column" style="width: 400px;">
+        <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input type="text" matInput [formControl]="emailFormControl">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput [formControl]="passwordFormControl">
+        </mat-form-field>
+        <button mat-raised-button (click)="login(false)">Login</button>
+        <button mat-button (click)="login(true)">Register</button>
+    </div>
+    
+</div>
