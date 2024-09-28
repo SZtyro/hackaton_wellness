@@ -4,12 +4,10 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import pl.drunkcom.core.model.BaseEntity;
 import pl.drunkcom.wellness.campaign.Campaign;
+import pl.drunkcom.wellness.enumerable.EnumActivityType;
 import pl.drunkcom.wellness.task.Task;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
@@ -27,6 +25,9 @@ public class Activity extends BaseEntity {
     private List<Campaign> campaigns;
 
     //Type enum
+
+    @Enumerated(EnumType.STRING)
+    private EnumActivityType type;
 
     //User
 }
