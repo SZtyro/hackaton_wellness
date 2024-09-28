@@ -1,6 +1,8 @@
 import { NgModule, Type } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { ActivitiesListComponent } from './component/activities-list/activities-list.component';
+import { ActivityService } from './service/activity.service';
 
 const routes: Routes = [
   {
@@ -10,6 +12,13 @@ const routes: Routes = [
       {
         path: 'dashboard',
         component: DashboardComponent
+      },
+      {
+        path: 'activities',
+        component: ActivitiesListComponent,
+        resolve: {
+          list: ActivityService
+        }
       },
       {
         path: '',

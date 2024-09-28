@@ -31,6 +31,8 @@ public class Activity extends BaseEntity implements Gradable {
 
     //Type enum
 
+    //TODO: Add tags
+
     @Enumerated(EnumType.STRING)
     private EnumActivityType type;
 

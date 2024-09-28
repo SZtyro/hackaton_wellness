@@ -18,8 +18,8 @@ export abstract class BaseService<T = any> {
     protected http: HttpClient
   ) { }
 
-  getAll(params? : any): Observable<FilteredResult<T>> {
-    return this.http.get<FilteredResult<T>>(this.endpoint, {params: params});
+  getAll(params? : any): Observable<T> {
+    return this.http.get<T>(this.endpoint, {params: params});
   }
 
   get(id: number): Observable<T> {
