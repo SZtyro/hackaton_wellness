@@ -162,8 +162,8 @@ mat-drawer-content{
 //   background: inherit;
 // }
 
-.selected{
-  background:red
+.selected .mat-icon{
+  background: var(--sys-primary-container) !important
   }
 
 @media screen and (max-width: 768px) {
