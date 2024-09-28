@@ -1,14 +1,12 @@
-package pl.drunkcom.wellness.task;
+package pl.drunkcom.wellness.models;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import pl.drunkcom.core.model.BaseEntity;
-import pl.drunkcom.wellness.activity.Activity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 @EqualsAndHashCode(callSuper = true)
 @Entity
