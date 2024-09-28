@@ -47,7 +47,7 @@ public class Activity extends BaseEntity implements Gradable {
 
     @Override
     public double getSumGrade() {
-        return 0;
+        return sumGrade;
     }
 
     @Override
