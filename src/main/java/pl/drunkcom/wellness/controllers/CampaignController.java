@@ -1,9 +1,10 @@
-package pl.drunkcom.wellness.campaign;
+package pl.drunkcom.wellness.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.drunkcom.core.rest.BaseController;
+import pl.drunkcom.wellness.models.Campaign;
+import pl.drunkcom.wellness.repositories.CampaignRepository;
 
 @RestController
 @RequestMapping("/api/campaigns")

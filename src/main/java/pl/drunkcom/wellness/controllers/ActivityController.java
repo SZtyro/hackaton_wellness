@@ -1,8 +1,10 @@
-package pl.drunkcom.wellness.activity;
+package pl.drunkcom.wellness.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.drunkcom.core.rest.BaseController;
+import pl.drunkcom.wellness.models.Activity;
+import pl.drunkcom.wellness.repositories.ActivityRepository;
 
 @RestController
 @RequestMapping("/api/activities")
