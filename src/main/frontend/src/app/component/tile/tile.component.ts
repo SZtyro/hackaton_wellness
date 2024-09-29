@@ -15,9 +15,7 @@ export class TileComponent {
         typeIcon: 'hiking',
         image:
           'https://www.niesamowitapolska.eu/images/malopolska/tatry/110755778_m.webp',
-        description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.`,
+        description: `Kasprowy Wierch to popularny szczyt w Tatrach, osiągający wysokość 1987 m n.p.m. Jest znany z malowniczych widoków, tras narciarskich oraz dostępu do szlaków turystycznych.`,
         progress: 25,
         start_date: new Date(2024,1,10),
         end_date: new Date(2025,1,10),

@@ -15,9 +15,7 @@ export class DashboardComponent {
             title:'Śnieżka',
       image:
         'https://hasajacezajace.com/wp-content/uploads/2023/10/sniezka-karkonosze-92.jpg',
-      description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.`,
+      description: `Wejście na Śnieżkę może być osobiste wyzwanie, poprawa kondycji, podziwianie piękna górskiej przyrody, oderwanie od codzienności oraz satysfakcja ze zdobycia najwyższego szczytu Karkonoszy`,
     },
     {
         typeIcon: 'pool',
@@ -27,9 +25,7 @@ export class DashboardComponent {
               title:'Mrągowo',
         image:
           'https://www.szalonewalizki.pl/wp-content/uploads/2021/09/DJI_0893-2.jpg',
-        description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.`,
+        description: `Mrągowo to urokliwe miasto położone na Mazurach w północno-wschodniej Polsce. Słynie z pięknych jezior, malowniczych krajobrazów i licznych atrakcji turystycznych`,
       },
 
         {
@@ -40,9 +36,7 @@ export class DashboardComponent {
                   title:'Wałbrzych',
             image:
               'https://www.busemprzezswiat.pl/wp-content/uploads/2020/07/dn0b2928.jpg',
-            description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.`,
+            description: `Celem zwiedzenia Wałbrzycha jest odkrycie jego historycznych i kulturowych atrakcji, takich jak Zamek Książ i Muzeum Przemysłu, podziwianie architektury oraz aktywny wypoczynek w okolicznych parkach i górach.`,
           },
 
             {
@@ -53,9 +47,7 @@ export class DashboardComponent {
                       title:'Polańczyk',
                 image:
                   'https://www.owbystre.pl/wp-content/uploads/2023/02/Polanczyk.jpg',
-                description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                bred for hunting.`,
+                description: `Polańczyk to malownicza miejscowość nad Jeziorem Solińskim, popularna wśród turystów. Oferuje rekreację wodną, piękne szlaki turystyczne w Bieszczadach`,
               },
   ];
 
@@ -68,9 +60,7 @@ daily = [
       title:'Zamek na Wawelu',
       image:
         'https://trivabook.pl/thumbs/6/wawel-garsc-praktycznych-informacji-o-zwiedzaniu-6812d983.jpg',
-      description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.`,
+      description: ``,
     },
     {
         typeIcon: 'cottage',
@@ -80,9 +70,7 @@ daily = [
         title:'Pompki',
         image:
           'https://hips.hearstapps.com/hmg-prod/images/man-cross-training-in-a-gym-royalty-free-image-1701272927.jpg',
-        description: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.`,
+        description: ``,
       },
   ];
 }

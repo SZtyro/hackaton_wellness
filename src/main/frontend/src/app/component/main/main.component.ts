@@ -4,8 +4,6 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-main',
-  standalone: true,
-  imports: [],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
