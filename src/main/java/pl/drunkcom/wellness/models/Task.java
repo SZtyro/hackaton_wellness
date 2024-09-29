@@ -39,7 +39,7 @@ public class Task extends BaseEntity {
     //Activity can have multiple tasks, but one task can be assigned to only one activity
     @ManyToOne
     @JoinColumn(name = "activity_id")
-    @JsonIgnoreProperties("tasks")
+    @JsonIgnoreProperties({"tasks", "parent"})
     private Activity activity;
 
 }

@@ -2,6 +2,7 @@ package pl.drunkcom.wellness.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -22,6 +23,13 @@ public class Activity extends BaseEntity implements Gradable {
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "activity")
     @OrderBy("index asc")
     private List<Task> tasks;
+
+    @ManyToOne()
+    @JoinColumn(name = "parent_id")
+//    @JsonIgnoreProperties("parent")
+    @JsonIgnore
+    private Activity parent;
+
 
     @Column
     private String author;

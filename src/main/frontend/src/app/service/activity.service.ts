@@ -12,4 +12,8 @@ export class ActivityService extends BaseService implements Resolve<any>{
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     return this.getAll();
   }
+
+  startActivity(id: any) {
+    return this.http.get(`${this.endpoint}/start/${id}`)
+  }
 }
