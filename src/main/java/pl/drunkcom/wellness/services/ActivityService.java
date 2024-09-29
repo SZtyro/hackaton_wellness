@@ -12,6 +12,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.*;
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -46,8 +47,8 @@ public class ActivityService extends GradeService<Activity, ActivityRepository> 
 
     @Override
     public List<Activity> getAll(){
-        List<Activity> entities = repository.findAll();
-        for (Activity a : entities) {
+        List<Activity> entities = new ArrayList<>();
+        for (Activity a : repository.findAll()) {
             if(a.getParent() == null)
                 entities.add(a);
         }

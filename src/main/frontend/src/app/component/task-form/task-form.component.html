@@ -2,16 +2,16 @@
     <div class="row">
         <div class="col-12 p-3 d-flex justify-content-between">
             <h2>
-                Task
+                Zadanie
             </h2>
             <div class="d-flex" style="gap: 8px">
-                <button mat-raised-button (click)="save()">Save</button>
-                <button mat-button (click)="close()">Close</button>
+                <button mat-raised-button (click)="save()">Zapisz</button>
+                <button mat-button (click)="close()">Zamknij</button>
             </div>
-           
+
         </div>
         <div class="col-12">
-           
+
             <ng-template #loading>
                 loading
             </ng-template>
@@ -19,18 +19,18 @@
                 <div class="col-12">
                     <div class="form-container row">
                         <mat-form-field appearance="outline" class="col-md-4">
-                            <mat-label>Name</mat-label>
+                            <mat-label>Nazwa</mat-label>
                             <input matInput type="text" [(ngModel)]="object.name">
                         </mat-form-field>
                         <mat-form-field appearance="outline" class="col-md-8">
-                            <mat-label>Coordinate</mat-label>
+                            <mat-label>Koordynuj</mat-label>
                             <input matInput type="text" [(ngModel)]="object.coordinates">
                         </mat-form-field>
                     </div>
-                   
+
                 </div>
             </div>
-           
+
         </div>
     </div>
 

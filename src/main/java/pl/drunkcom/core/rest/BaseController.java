@@ -47,16 +47,23 @@ public abstract class BaseController<T extends BaseEntity, R extends BaseReposit
     @Autowired
     protected EntityManager em;
 
-    @PostConstruct
     private void init() {
+        executeInTransaction(() -> {
+            log.info(String.format("Deleted drafts: %d", service.deleteDrafts()));
+        });
+    }
+
+    private void executeInTransaction(Runnable action) {
         DefaultTransactionDefinition def = new DefaultTransactionDefinition();
         def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
         TransactionStatus status = transactionManager.getTransaction(def);
         try {
-            log.info(String.format("Deleted drafts: %d", service.deleteDrafts()));
+            action.run();
             transactionManager.commit(status);
         } catch (Exception e) {
-            transactionManager.rollback(status);
+            if (!status.isCompleted()) {
+                transactionManager.rollback(status);
+            }
             throw e;
         }
     }

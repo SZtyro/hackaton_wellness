@@ -21,8 +21,8 @@ export class TileComponent {
         progress: 25,
         start_date: new Date(2024,1,10),
         end_date: new Date(2025,1,10),
-        main_category: 'Indoor',
-        sub_category: 'hiking',
+        main_category: 'Wewnątrz',
+        sub_category: 'Trekking',
         goal: 'Kasprowy wierch'
       }
   ]
