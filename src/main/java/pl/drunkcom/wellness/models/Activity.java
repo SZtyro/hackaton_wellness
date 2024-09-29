@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import pl.drunkcom.core.model.BaseEntity;
-import pl.drunkcom.wellness.enumerable.EnumActivityType;
 import pl.drunkcom.wellness.interfaces.Gradable;
 
 import javax.persistence.*;
@@ -25,17 +24,24 @@ public class Activity extends BaseEntity implements Gradable {
     private List<Task> tasks;
 
     @Column
+    private String author;
+
+    @Column
     private Integer countOfGrades = 0;
 
     @Column
     private Double sumGrade = 0d;
 
-    //Type enum
+    @Column
+    @Lob
+    private String description;
 
-    //TODO: Add tags
+    @ElementCollection
+    @Column
+    private List<String> guests;
 
-    @Enumerated(EnumType.STRING)
-    private EnumActivityType type;
+    @ManyToMany
+    private List<ActivityTag> activityTag;
 
     @Override
     public int getCountOfGrades() {
@@ -56,6 +62,4 @@ public class Activity extends BaseEntity implements Gradable {
     public void setSumGrade(double sumGrade) {
         this.sumGrade = sumGrade;
     }
-
-    //User
 }

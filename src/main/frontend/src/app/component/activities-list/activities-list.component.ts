@@ -18,6 +18,7 @@ export class ActivitiesListComponent implements OnInit{
 
   ngOnInit(): void {
     this.items = this.activatedRoute.snapshot.data.list
+    console.log(this.items)
   }
-  
+
 }
