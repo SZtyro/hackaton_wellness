@@ -9,15 +9,15 @@ import * as L from 'leaflet';
 export class MapComponent implements AfterViewInit {
 
   @Input()
-  coordinates : string = '49.72397993323012, 18.856487533233324';
-  cords = this.coordinates.split(',')
+  coordinates : {coordinates: string}[]= []
 
-  private map;
+
+  private map: L.Map;
 
   private initMap(): void {
     this.map = L.map('map', {
-      center: [ this.cords[0], this.cords[1] ],
-      zoom: 11
+      center: [0,0],
+      zoom: 13
   });
 
   const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -28,13 +28,22 @@ export class MapComponent implements AfterViewInit {
 
       tiles.addTo(this.map);
 
-      L.marker([this.cords[0], this.cords[1]]).addTo(this.map);
   }
 
   constructor() { }
 
-    ngAfterViewInit(): void {
-      console.log('cord',this.coordinates)
-      this.initMap();
-    }
+  ngAfterViewInit(): void {
+    this.initMap();
+    this.coordinates.forEach((c, index )=> {
+      let cords = (c.coordinates ?? '0, 0').split(',')
+      if(index == 0)
+         this.map.setView([Number(cords[0]), Number(cords[1])])
+     
+      this.addMapPoint(cords[0], cords[1])
+    })
+  }
+
+  addMapPoint(x, y){
+    L.marker([x, y]).addTo(this.map);
+  }
 }

@@ -24,7 +24,7 @@ spring:
                 hbm2ddl:
                     auto: update
                     create_namespaces: true
-                show_sql: true
+                show_sql: false
                 format_sql: true
     mvc:
         pathmatch:
