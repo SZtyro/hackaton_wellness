@@ -46,6 +46,7 @@ import { ActivitiesFormComponent } from './component/activities-form/activities-
 import { AchievementsComponent } from './component/achievements/achievements.component';
 import { TaskFormComponent } from './component/task-form/task-form.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import {MapComponent } from './component/map/map.component'
 
 
 export let AppInjector: Injector;
@@ -81,7 +82,8 @@ export const MY_DATE_FORMATS = {
     LoginComponent,
     ActivitiesFormComponent,
     AchievementsComponent,
-    TaskFormComponent
+    TaskFormComponent,
+    MapComponent
   ],
   bootstrap: [AppComponent],
   imports: [

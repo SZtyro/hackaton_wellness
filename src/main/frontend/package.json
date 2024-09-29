@@ -26,6 +26,7 @@
     "@ngx-translate/http-loader": "^8.0.0",
     "@popperjs/core": "^2.11.7",
     "bootstrap": "^5.2.3",
+    "leaflet": "^1.9.4",
     "lodash": "^4.17.21",
     "moment": "^2.30.1",
     "ngx-translate": "^0.0.1-security",
