@@ -39,16 +39,6 @@ public class ActivityController extends BaseController<Activity, ActivityReposit
 
     @Autowired
     private TaskService taskService;
-    @GetMapping()
-    @SuppressWarnings("unchecked")
-    public ResponseEntity<List<Activity>> getAll(){
-        List<Activity> entities = new ArrayList<>();
-        for(Activity a : this.service.getAll()){
-            if(a.getParent() == null)
-                entities.add(a);
-        }
-        return new ResponseEntity<>(entities, HttpStatus.OK);
-    }
 
     @PostMapping("/addGrade")
     public ResponseEntity<Activity> addGrade(Long id, Double grade){
