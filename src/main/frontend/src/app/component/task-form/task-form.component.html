@@ -17,10 +17,14 @@
             </ng-template>
             <div class="row form-wrapper" *ngIf="loaded; else loading" >
                 <div class="col-12">
-                    <div class="form-container">
-                        <mat-form-field appearance="outline">
+                    <div class="form-container row">
+                        <mat-form-field appearance="outline" class="col-md-4">
                             <mat-label>Name</mat-label>
                             <input matInput type="text" [(ngModel)]="object.name">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="col-md-8">
+                            <mat-label>Coordinate</mat-label>
+                            <input matInput type="text" [(ngModel)]="object.coordinates">
                         </mat-form-field>
                     </div>
                    

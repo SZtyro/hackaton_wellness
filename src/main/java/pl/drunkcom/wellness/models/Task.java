@@ -2,6 +2,7 @@ package pl.drunkcom.wellness.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import pl.drunkcom.core.model.BaseEntity;
@@ -39,7 +40,7 @@ public class Task extends BaseEntity {
     //Activity can have multiple tasks, but one task can be assigned to only one activity
     @ManyToOne
     @JoinColumn(name = "activity_id")
-    @JsonIgnoreProperties({"tasks", "parent"})
+    @JsonIncludeProperties({"id"})
     private Activity activity;
 
 }
