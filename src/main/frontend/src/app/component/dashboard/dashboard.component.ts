@@ -11,7 +11,7 @@ export class DashboardComponent {
       typeIcon: 'hiking',
       grade: 4.3,
       shared: 21,
-            type:'Outdoor',
+            type:'Zewnątrz',
             title:'Śnieżka',
       image:
         'https://hasajacezajace.com/wp-content/uploads/2023/10/sniezka-karkonosze-92.jpg',
@@ -23,7 +23,7 @@ export class DashboardComponent {
         typeIcon: 'pool',
         grade: 2.3,
         shared: 95,
-              type:'Outdoor',
+              type:'Zewnątrz',
               title:'Mrągowo',
         image:
           'https://www.szalonewalizki.pl/wp-content/uploads/2021/09/DJI_0893-2.jpg',
@@ -64,7 +64,7 @@ daily = [
       typeIcon: 'directions_walk',
       grade: 5.3,
       shared: 234,
-      type:'Outdoor',
+      type:'Zewnątrz',
       title:'Zamek na Wawelu',
       image:
         'https://trivabook.pl/thumbs/6/wawel-garsc-praktycznych-informacji-o-zwiedzaniu-6812d983.jpg',
@@ -76,7 +76,7 @@ daily = [
         typeIcon: 'cottage',
         grade: 6.3,
         shared: 176,
-        type:'Indoor',
+        type:'Wewnątrz',
         title:'Pompki',
         image:
           'https://hips.hearstapps.com/hmg-prod/images/man-cross-training-in-a-gym-royalty-free-image-1701272927.jpg',

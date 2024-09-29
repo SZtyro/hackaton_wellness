@@ -21,10 +21,10 @@ export class AppComponent implements OnInit {
   }
 
   menu = [
-    {name: 'Dashboard', icon: 'home', path: 'dashboard'},
-    {name: 'Activities', icon: 'directions_run', path: 'activities'},
-    {name: 'Campaigns', icon: 'trophy', path: 'campaigns'},
-    {name: 'Achievements', icon: 'social_leaderboard', path: 'achievements'},
+    {name: 'Start', icon: 'home', path: 'dashboard'},
+    {name: 'Aktywności', icon: 'directions_run', path: 'activities'},
+    {name: 'Kampanie', icon: 'trophy', path: 'campaigns'},
+    {name: 'Osiągnięcia', icon: 'social_leaderboard', path: 'achievements'},
   ]
 
   ngOnInit(): void {
