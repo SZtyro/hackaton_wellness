@@ -1,11 +1,9 @@
 package pl.drunkcom.wellness.models;
 
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -24,7 +22,8 @@ public class AppUser {
     @Column
     private String password;
 
-
+    @ManyToOne
+    private Activity currentActivity;
 
 
 }

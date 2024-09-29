@@ -62,11 +62,18 @@
                         </div>
                         <div class="task-wrapper" cdkDropList (cdkDropListDropped)="drop($event)">
                             <div cdkDrag class="task" *ngFor="let task of object.tasks">
-                                {{task.name}}
+                                <div>{{task.name}}</div>
+                                <div>
+                                    <button mat-icon-button [routerLink]="['/tasks', task.id]">
+                                        <span class="material-symbols-rounded">
+                                            edit
+                                        </span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
-                        <button mat-raised-button>Start activity</button>
+                        <button mat-raised-button (click)="startActivity()">Start activity</button>
 
                     </div>
                 </div>

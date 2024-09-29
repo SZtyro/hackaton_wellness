@@ -11,7 +11,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
   styleUrl: './activities-form.component.scss'
 })
 export class ActivitiesFormComponent extends BaseFormComponent{
-  override resource: BaseService<any> = this.injector.get(ActivityService);
+  override resource: ActivityService = this.injector.get(ActivityService);
   tasks = this.injector.get(TaskService);
 
 
@@ -22,7 +22,17 @@ export class ActivitiesFormComponent extends BaseFormComponent{
     )
   }
 
-  drop(event: CdkDragDrop<string[]>) {
+  drop(event: CdkDragDrop<any[]>) {
     moveItemInArray(this.object.tasks , event.previousIndex, event.currentIndex);
+    (this.object.tasks as []).forEach((e:any, index) => {
+      this.object.tasks[index].index = index; 
+    });
+    
+  }
+
+  startActivity(){
+    this.resource.startActivity(this.object.id).subscribe(
+      (current: any) => this.router.navigate(["activities", current.id])
+    );
   }
 }

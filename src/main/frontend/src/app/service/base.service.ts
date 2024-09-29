@@ -13,6 +13,7 @@ export type FilteredResult<T = any> = {
   providedIn: 'root'
 })
 export abstract class BaseService<T = any> {
+  
 
   abstract endpoint:string;
   

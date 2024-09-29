@@ -50,4 +50,8 @@ public class AppUserService {
     public AppUser findByUsername(String username) {
         return appUserRepository.findByUsername(username);
     }
+
+    public AppUser save(AppUser entity){
+        return appUserRepository.save(entity);
+    }
 }

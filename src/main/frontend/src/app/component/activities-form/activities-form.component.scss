@@ -23,11 +23,15 @@
     background-color: var(--sys-secondary-container);
     border-radius: 4px;
     padding: 10px;
+    cursor: grab;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .mat-mdc-form-field {
     display: block;
-    }
+}
 
 .container-margin {
     margin-top: 15px;
