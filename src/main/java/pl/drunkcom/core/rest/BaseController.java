@@ -6,6 +6,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionDefinition;
@@ -57,6 +59,11 @@ public abstract class BaseController<T extends BaseEntity, R extends BaseReposit
             transactionManager.rollback(status);
             throw e;
         }
+    }
+
+    public String getPrincipal(){
+        User temp = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return temp.getUsername();
     }
 
     /**

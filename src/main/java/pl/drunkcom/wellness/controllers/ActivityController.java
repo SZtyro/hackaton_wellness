@@ -59,9 +59,4 @@ public class ActivityController extends BaseController<Activity, ActivityReposit
         return new Activity();
 
     }
-
-    public String getPrincipal(){
-        User temp = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return temp.getUsername();
-    }
 }
