@@ -44,6 +44,9 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { LoginComponent } from './component/login/login.component';
 import { ActivitiesFormComponent } from './component/activities-form/activities-form.component';
 import { AchievementsComponent } from './component/achievements/achievements.component';
+import { TaskFormComponent } from './component/task-form/task-form.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+
 
 export let AppInjector: Injector;
 
@@ -77,7 +80,8 @@ export const MY_DATE_FORMATS = {
     ActivitiesListComponent,
     LoginComponent,
     ActivitiesFormComponent,
-    AchievementsComponent
+    AchievementsComponent,
+    TaskFormComponent
   ],
   bootstrap: [AppComponent],
   imports: [
@@ -118,6 +122,7 @@ export const MY_DATE_FORMATS = {
     HttpClientModule,
     MatBadgeModule,
     MatProgressBarModule,
+    DragDropModule
   ],
   providers: [
     // { provide: MAT_DATE_LOCALE, useValue: 'pl-PL' },

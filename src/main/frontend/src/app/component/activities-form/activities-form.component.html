@@ -8,25 +8,30 @@
                 <button mat-raised-button (click)="save()">Save</button>
                 <button mat-button (click)="close()">Close</button>
             </div>
-           
+
         </div>
         <div class="col-12">
-           
+
             <ng-template #loading>
                 loading
             </ng-template>
-            <div class="row form-wrapper" *ngIf="loaded; else loading" >
+            <div class="row" *ngIf="loaded; else loading" >
                 <div class="col-md-8 col-lg-9">
                     <div class="form-container">
                         <mat-form-field appearance="outline">
                             <mat-label>Name</mat-label>
                             <input matInput type="text" [(ngModel)]="object.name">
                         </mat-form-field>
+                      &nbsp;
+                        <mat-form-field appearance="outline">
+                          <mat-label>Description</mat-label>
+                          <textarea  matInput [(ngModel)]="object.description"></textarea>
+                        </mat-form-field>
                     </div>
-                   
+
                 </div>
                 <div class="col-md-4 col-lg-3">
-                    <div class="form-container container-margin d-flex align-items-center flex-column">
+                    <div class="form-container d-flex align-items-center flex-column" style="margin-right: 10px; margin-bottom: 15px;">
                         <div class="profile-img">FT</div>
                         <div class="d-flex">
                             <span class="material-symbols-rounded">
@@ -42,7 +47,16 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-container container-margin">
-                        Taski
+                        <div class="d-flex justify-content-between">
+                            <span style="font-weight: 500; font-size: large;">Tasks</span>
+                            <button mat-flat-button (click)="addTask()">Dodaj</button>
+                        </div>
+                        <div class="task-wrapper" cdkDropList (cdkDropListDropped)="drop($event)">
+                            <div cdkDrag class="task" *ngFor="let task of object.tasks">
+                                {{task.name}}
+                            </div>
+                        </div>
+
                         <button mat-raised-button>Start activity</button>
 
                     </div>
@@ -51,7 +65,7 @@
                     <div class="form-container container-margin">map</div>
                 </div>
             </div>
-           
+
         </div>
     </div>
 
