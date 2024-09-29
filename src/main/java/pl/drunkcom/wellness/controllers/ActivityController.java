@@ -1,6 +1,7 @@
 package pl.drunkcom.wellness.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
@@ -17,9 +18,11 @@ import pl.drunkcom.wellness.services.AppUserService;
 import pl.drunkcom.wellness.services.TaskService;
 
 import javax.websocket.server.PathParam;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/activities")
@@ -36,7 +39,6 @@ public class ActivityController extends BaseController<Activity, ActivityReposit
 
     @Autowired
     private TaskService taskService;
-
 
     @PostMapping("/addGrade")
     public ResponseEntity<Activity> addGrade(Long id, Double grade){
