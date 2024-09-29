@@ -28,6 +28,9 @@ public abstract class BaseEntity {
     @Column
     private boolean draft = true;
 
+    @Column
+    private String author;
+
     public boolean isDraft() {
         return draft;
     }

@@ -34,6 +34,9 @@ public class Activity extends BaseEntity implements Gradable {
     @Column
     private String author;
 
+    @ManyToMany
+    private List<Campaign> campaigns;
+
     @Column
     private Integer countOfGrades = 0;
 
