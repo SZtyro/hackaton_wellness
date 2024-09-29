@@ -35,8 +35,8 @@ input {
 }
 
 .form-container{
-  background: var(--sys-surface-container-high);
-  border-radius: 8px;
+  background: var(--sys-surface-container);
+  border-radius: 16px;
   padding: 24px;
 }
 
@@ -46,7 +46,9 @@ input {
 }
 
 .container-margin{
-  margin: 10px;
+  // margin: 10px;
 }
+
+
 
 

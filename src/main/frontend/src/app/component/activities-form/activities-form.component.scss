@@ -10,7 +10,7 @@
 }
 
 .task-wrapper{
-    background-color: var(--sys-surface-bright);
+    // background-color: var(--sys-surface-bright);
     border-radius: 4px;
     padding: 4px;
     display: flex;
@@ -38,15 +38,20 @@
 }
 
 .container-margin {
-    margin-top: 15px;
+    // margin-top: 15px;
 }
 
 
 #map { height: 180px; }
 
 .map-container{
-    margin-top: 15px;
+    // margin-top: 15px;
     padding: 0;
-    border-radius: 15px;
+    border-radius: 16px;
     overflow: hidden;
+}
+
+
+.row{
+    margin-bottom: 24px;
 }
