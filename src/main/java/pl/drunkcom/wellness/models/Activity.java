@@ -16,9 +16,6 @@ public class Activity extends BaseEntity implements Gradable {
     @Column
     private String name;
 
-    @Column
-    private String author;
-
     @OneToMany
     private List<Task> tasks;
 
