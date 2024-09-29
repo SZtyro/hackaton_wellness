@@ -1,7 +1,10 @@
 package pl.drunkcom.wellness.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import pl.drunkcom.core.model.BaseEntity;
 import pl.drunkcom.wellness.interfaces.Gradable;
 
@@ -16,14 +19,12 @@ public class Activity extends BaseEntity implements Gradable {
     @Column
     private String name;
 
-    @Column
-    private String author;
-
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "activity")
+    @OrderBy("index asc")
     private List<Task> tasks;
 
-    @ManyToMany
-    private List<Campaign> campaigns;
+    @Column
+    private String author;
 
     @Column
     private Integer countOfGrades = 0;

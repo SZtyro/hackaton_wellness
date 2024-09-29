@@ -34,3 +34,19 @@ input {
     outline: none;
 }
 
+.form-container{
+  background: var(--sys-surface-container-high);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.form-wrapper > div {
+  padding: 0;
+  
+}
+
+.container-margin{
+  margin: 10px;
+}
+
+

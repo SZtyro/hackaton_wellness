@@ -1,5 +1,5 @@
 import { Component, Directive, Injector, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { BaseService } from 'src/app/service/base.service';
 
 @Directive()
@@ -12,7 +12,8 @@ export abstract class BaseFormComponent implements OnInit {
 
   constructor(
     protected injector: Injector,
-    protected activatedRoute: ActivatedRoute
+    protected activatedRoute: ActivatedRoute,
+    protected router: Router
     ){
     
   }

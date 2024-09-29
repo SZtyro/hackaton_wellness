@@ -42,7 +42,16 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-container container-margin">
-                        Taski
+                        <div class="d-flex justify-content-between">
+                            <span style="font-weight: 500; font-size: large;">Tasks</span>
+                            <button mat-flat-button (click)="addTask()">Dodaj</button>
+                        </div>
+                        <div class="task-wrapper" cdkDropList (cdkDropListDropped)="drop($event)">
+                            <div cdkDrag class="task" *ngFor="let task of object.tasks">
+                                {{task.name}}
+                            </div>
+                        </div>
+
                         <button mat-raised-button>Start activity</button>
 
                     </div>
