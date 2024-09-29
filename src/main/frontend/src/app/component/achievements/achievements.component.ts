@@ -13,6 +13,7 @@ export class AchievementsComponent {
     {icon: 'avg_time', progress: 22, title: 'Długi trening'},
     {icon: 'landscape', progress: 80, title: 'Beskid Śląski'},
     {icon: 'star_half', progress: 50, title: 'Twórca'},
+    {icon: 'face', progress: 33, title: 'Katowice'}
   ];
 
 }
