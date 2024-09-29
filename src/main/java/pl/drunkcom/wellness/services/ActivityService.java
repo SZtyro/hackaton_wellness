@@ -1,6 +1,7 @@
 package pl.drunkcom.wellness.services;
 
 import org.hibernate.Hibernate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.drunkcom.core.service.BaseService;
 import pl.drunkcom.wellness.models.Activity;
@@ -18,6 +19,9 @@ public class ActivityService extends GradeService<Activity, ActivityRepository> 
 
     @PersistenceContext
     private EntityManager entityManager;
+
+    @Autowired
+    private ActivityRepository repository;
 
     @Transactional
     public List<Activity> findByAllTags(List<ActivityTag> requestedTags) {
@@ -38,6 +42,16 @@ public class ActivityService extends GradeService<Activity, ActivityRepository> 
                 .having(cb.equal(cb.count(tags), requestedTags.size()));
 
         return entityManager.createQuery(query).getResultList();
+    }
+
+    @Override
+    public List<Activity> getAll(){
+        List<Activity> entities = repository.findAll();
+        for (Activity a : entities) {
+            if(a.getParent() == null)
+                entities.add(a);
+        }
+        return entities;
     }
 
 }
